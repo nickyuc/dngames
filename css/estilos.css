@@ -1,3 +1,65 @@
+/*@font-face {
+    font-family: 'open_sansregular';
+    src: url('fonts/OpenSans-Regular-webfont.eot');
+    src: url('fonts/OpenSans-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/OpenSans-Regular-webfont.woff') format('woff'),
+         url('fonts/OpenSans-Regular-webfont.ttf') format('truetype'),
+         url('fonts/OpenSans-Regular-webfont.svg#open_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}*/
+
+@font-face {
+	font-family: 'icomoon';
+	src:url('fonts/icomoon.eot?ox1fw7');
+	src:url('fonts/icomoon.eot?#iefixox1fw7') format('embedded-opentype'),
+		url('fonts/icomoon.woff?ox1fw7') format('woff'),
+		url('fonts/icomoon.ttf?ox1fw7') format('truetype'),
+		url('fonts/icomoon.svg?ox1fw7#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'icomoon';
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-f-up:before {
+	content: "\e600";
+	color: #42A100;
+}
+
+.icon-f-down:before {
+	content: "\e601";
+	color: #F4502A;
+}
+
+.icon-pen:before {
+	content: "\e908";
+}
+
+.icon-star-empty:before {
+	content: "\e9d7";
+}
+
+.icon-star-full:before {
+	content: "\e9d9";
+	color: #FFA53E;
+}
+
+
+
 a
 {
 	color:  #22BCE0;
@@ -5,7 +67,7 @@ a
 body
 {
 	background: #EEEEEE;
-	font-family: Arial;
+    font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
 }
 header
@@ -14,6 +76,7 @@ header
 	color: white;
 	padding: 0.5em;
 	overflow: hidden;
+
 }
 header figure
 {
@@ -57,8 +120,9 @@ figure
 nav
 {
 	background: #80BCA3;
-	padding: 0 0.5em;
-	position: relative;;
+	padding: 0 2em 0 0;
+	position: relative;
+	box-shadow: rgba(0,0,0,0.5) 0px 2px 10px;
 }
 
 nav ul
@@ -66,12 +130,14 @@ nav ul
 	list-style: none;
 	margin: 0;
 	padding: 0;
+
 }
 nav ul #publicar_nav
 {
 	position: absolute;
 	top: -0.4em;
 	right: 0;
+	margin: 0.1em 0.4em 0 0;
 
 }
 nav ul #publicar_nav a
@@ -144,19 +210,20 @@ footer p:last-child:before
 #contenido .item .autor_item
 {
 	color: #AAA;
+	font-size: 14px;
 
 }
 
 #contenido .item .datos_item
 {
-	margin:1em 1em 0 0;
+	margin:0.3em;
 	text-align: right;
-}
-#contenido .item .datos_item
-{
-		color: #AAA;
+	color: #AAA;
+	padding:  0.2em;
+
 
 }
+
 #contenido .item .datos_item .tag_item
 {
 	background: #F4502A;	
@@ -164,7 +231,8 @@ footer p:last-child:before
 	color: white;
 	display: inline-block;
 	float: left;
-	padding: 0.2em;
+	padding:  0.1em;
+	margin: 0.1em;
 	text-decoration: none;
 }
 #contenido .item .imagen_item
@@ -174,41 +242,72 @@ footer p:last-child:before
 }
 #contenido .item .imagen_item img
 {
-	width: 96px;
+	width: 70px;
 }
 
 #contenido .item .titulo_item
 {
 	font-size: 1.2em;
 	font-style: italic;
-	padding: 1em 1em 0 0 ;
+	padding: 0.1em;
+	margin: 0.1em;
 }
 #contenido .item .titulo_item a
 {
 	color: #444;
 	text-decoration: none;
+	font-style: bold;
 
 }
 
 #contenido .item .votacion
 {
 	background: white;
-	left: 5%;
+	left: 1%;
 	border-radius: 0 0 0.5em 0.5em;
 	position: absolute;
 	margin-top: 3px;
 	padding: 0.2em 0.5em;
 	top: 100%;
-	width: 90%;
+	width: 95%;
 }
+#contenido .item .votacion a
+{
+	text-decoration: none;
+}
+
 
 #contenido .item .votacion .comentarios_item, 
 #contenido .item .votacion .guardar_item
 {
 float: right;
 }
+/*@media print{
+	body
+	{
+		font-size: 50px;
+	}
+}*/
+@media screen and (min-width: 500px){
+	#publicar_nav a:last-child:after
+	{
+		content: " Publicar";
+	}
 
+@media screen and (min-width: 800px){
+	#contenido
+		{
+			overflow: hidden;
+		}
+	
+	#contenido .item
+		{
+		width:48%;
+		float: left; 
+		margin-left: 1%;
+		}
 
+}
 
 
 
